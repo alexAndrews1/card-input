@@ -66,8 +66,8 @@
     border: 1px solid black;
 }
 .sub-container {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+   display: grid;
+   grid-template-columns: auto auto;
     width: 400px;
 }
 .mm-input {
@@ -83,9 +83,8 @@
     border: 1px solid black;
 }
 .cvv-input {
-    width: 100%;
     padding: 10px;
-    grid-column: 3/5; 
+    width: 100%;
     border-radius: 6px;
     border: 1px solid black;
 }

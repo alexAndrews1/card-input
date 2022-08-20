@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Interactive card details form</title>
 
@@ -15,37 +17,46 @@
   </style>
 </head>
 <body>
+<div class="sides-container">
+  <div>
+    <img class="background-main-img" src="../images/bg-main-desktop.png">
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+    <img class="card-front" src="../images/bg-card-front.png">
 
-  000
+    <img class="card-back" src="../images/bg-card-back.png">
 
-  Cardholder Name
-  e.g. Jane Appleseed
+    <div class="card-bank-number">0000 0000 0000 0000</div>
 
-  Card Number
-  e.g. 1234 5678 9123 0000
+    <div class="card-name">Jane Appleseed</div>
 
-  Exp. Date (MM/YY)
-  MM
-  YY
+    <div class="exp-date">00/00</div>
 
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
+    <div class="card-cvv">000</div>
+  </div>
+  <div class="form-container">
+    <label>CARDHOLDER NAME</label><br>
+    <input class="name-input" placeholder="Jane Appleseed"><br><br>
+    <label>CARD NUMBER</label><br>
+    <input class="name-input" placeholder="0000 0000 0000 0000"><br><br>
+    
+    <div class="sub-container">
+      <div>
+        <label>EXP. DATE (MM/YY)</label><br>
+        <input class="mm-input" placeholder="MM">
+        <input class="yy-input" placeholder="YY">
+      </div>
+      <div>
+        <label>CVC</label><br>
+        <input class="cvv-input" placeholder="e.g. 123"><br><br>
+      </div>
+    </div>
+    <button class="confirm-btn">Confirm</button>
+  </div>
+</div>
   
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
