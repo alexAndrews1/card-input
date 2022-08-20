@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap');
+*{
+    margin: 0px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+.sides-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.background-main-img{
+    height:100vh;
+    width: 40%;
+    content: url("../images/bg-main-desktop.png")
+}
+.card-front {
+    width: 25%;
+    height: 25%;
+    position: absolute;
+    top: 22%;
+    left: 10%;
+}
+.card-back {
+    width: 25%;
+    height: 25%;
+    position: absolute;
+    bottom: 22%;
+    left: 15%;
+    
+}
+.card-bank-number {
+    position: absolute;
+    top: 37%;
+    left: 12%;
+    font-size: 20px;
+    color: white;
+}
+.card-name {
+    position: absolute;
+    top: 42%;
+    left: 12%;
+    font-size: 14px;
+    color: white;
+}
+.exp-date {
+    position: absolute;
+    top: 42%;
+    left: 30%;
+    font-size: 14px;
+    color: white;
+}
+.card-cvv {
+    position: absolute;
+    bottom: 33.5%;
+    left: 35%;
+    color: white;
+}
+.form-container {
+    position: absolute;
+    top: 30%;
+    left: 55%;
+}
+.name-input, .card-input {
+    width: 400px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid black;
+}
+.sub-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 400px;
+}
+.mm-input {
+    width: 33%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid black;
+}
+.yy-input {
+    width: 33%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid black;
+}
+.cvv-input {
+    width: 100%;
+    padding: 10px;
+    grid-column: 3/5; 
+    border-radius: 6px;
+    border: 1px solid black;
+}
+.confirm-btn {
+    width: 420px;
+    padding: 12px;
+    cursor: pointer;
+    background-color:hsl(278, 68%, 11%);
+    color: white;
+    border-radius: 6px;
+    border: none;
+}
+@media only screen and (max-width: 1190px) {
+    .card-front {
+        height: 22%;
+        top: 26%;
+        width: 30%;
+    }
+    .card-back {
+        height: 22%;
+        bottom: 26%; 
+        width: 30%;
+    }
+    .card-bank-number {
+        top: 40%;
+        left: 12%;
+        font-size: 16px;
+    }
+    .card-name {
+        top: 44%;
+        left: 12%;
+        font-size: 12px;
+    }
+    .exp-date {
+        top: 44%;
+        left: 34.5%;
+        font-size: 12px;
+    }
+    .card-cvv {
+        bottom: 36%;
+        left: 39%;
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .card-front {
+        height: 22%;
+        width: 32%;
+        top: 26%;
+    }
+    .card-back {
+        height: 22%;
+        bottom: 26%; 
+        width: 32%;
+    }
+    .card-bank-number {
+        left: 12%;
+        font-size: 16px;
+    }
+    .card-name {
+        left: 12%;
+        font-size: 12px;
+    }
+    .exp-date {
+        left: 36%;
+        font-size: 12px;
+    }
+    .card-cvv {
+        bottom: 36%;
+        left: 40%;
+        font-size: 14px;
+    }
+}
+@media only screen and (max-height: 790px) {
+    .card-front {
+        width: 22%;
+    }
+    .card-back {
+        width: 22%;     
+    }
+    .card-bank-number {
+        left: 13%;
+        font-size: 15px;
+    }
+    .card-name {
+        left: 13%;
+        font-size: 12px;
+    }
+    .exp-date {
+        left: 28%;
+        font-size: 12px;
+    }
+    .card-cvv {
+        bottom: 33.75%;
+        left: 32.5%;
+        font-size: 14px;
+    }
+}
+@media only screen and (max-height: 650px) {
+    .card-front {
+        left: 12%;
+        width: 20%;
+    }
+    .card-back {
+        width: 20%;     
+    }
+    .card-bank-number {
+        left: 13%;
+        font-size: 15px;
+    }
+    .card-name {
+        left: 13%;
+        font-size: 12px;
+    }
+    .exp-date {
+        left: 28%;
+        font-size: 12px;
+    }
+    .card-cvv {
+        bottom: 33.75%;
+        left: 30.5%;
+        font-size: 14px;
+    }
+}
+@media only screen and (max-height: 550px) {
+    .card-front {
+        left: 12%;
+        width: 20%;
+        height: 25%;
+    }
+    .card-back {
+        width: 20%;   
+        height: 25%;  
+    }
+}
+@media only screen and (max-width: 400px) {
+    .background-main-img{
+        width:100vw;
+        height: 90%;
+        content: url("../images/bg-main-mobile.png");
+    }
+    .card-back {
+        width: 70%;
+        height: 20%;
+        top: 5%;
+        left: 25%;
+        z-index: 1;
+    }
+     .card-front {
+        width: 70%;
+        height: 20%;
+        top: 17%;
+        left: 10%;
+        z-index: 3;
+    } 
+    .sides-container {
+        display: flex;
+        grid-template-columns: auto auto;
+    }
+    .card-bank-number {
+        position: absolute;
+        top: 29%;
+        left: 15%;
+        font-size: 16px;
+        color: white;
+        z-index: 5;
+    }
+    .card-name {
+        position: absolute;
+        top: 33%;
+        left: 15%;
+        font-size: 12px;
+        color: white;
+        z-index: 5;
+    }
+    .exp-date {
+        position: absolute;
+        top: 33%;
+        left: 65%;
+        font-size: 12px;
+        color: white;
+        z-index: 5;
+    }
+    .card-cvv {
+        position: absolute;
+        top: 13.8%;
+        left: 80%;
+        color: white;
+        z-index: 5;
+        font-size: 12px;
+    }
+    .form-container {
+        position: absolute;
+        top: 45%;
+        left: 5%;
+    }
+    .sub-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        width: 88%;
+    }
+    .name-input, .card-input {
+        width: 88%;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid black;
+        outline: none;
+    }
+    .mm-input {
+        width: 33%;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid black;
+        outline: none;
+    }
+    .yy-input {
+        width: 33%;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid black;
+        outline: none;
+    }
+    .cvv-input {
+        width: 100%;
+        padding: 10px;
+        grid-column: 3/5; 
+        border-radius: 6px;
+        border: 1px solid black;
+        outline: none;
+    }
+    .confirm-btn {
+        width: 94%;
+        padding: 12px;
+        cursor: pointer;
+        background-color:hsl(278, 68%, 11%);
+        color: white;
+        border-radius: 6px;
+        border: none;
+    }
+    
+}
