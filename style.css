@@ -25,7 +25,6 @@
     position: absolute;
     bottom: 22%;
     left: 15%;
-    
 }
 .card-bank-number {
     position: absolute;
@@ -324,5 +323,4 @@
         border-radius: 6px;
         border: none;
     }
-    
 }
