@@ -1,62 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
-  <link rel="stylesheet" href="style.css">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-<div class="sides-container">
-  <div>
-    <img class="background-main-img" src="../images/bg-main-desktop.png">
 
-    <img class="card-front" src="../images/bg-card-front.png">
+<div class="container">
 
-    <img class="card-back" src="../images/bg-card-back.png">
+    <div class="card-container">
 
-    <div class="card-bank-number">0000 0000 0000 0000</div>
+        <div class="front">
+            <div class="image">
+                <img src="../images/chip.png" alt="">
+                <img src="../images/visa.png" alt="">
+            </div>
+            <div class="card-number-box">0000 0000 0000 0000</div>
+            <div class="flexbox">
+                <div class="box">
+                    <span><b>card holder</b></span>
+                    <div class="card-holder-name">full name</div>
+                </div>
+                <div class="box">
+                    <span><b>expires</b></span>
+                    <div class="expiration">
+                        <span class="exp-month">mm</span>
+                        <span class="exp-year">yy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <div class="card-name">Jane Appleseed</div>
+        <div class="back">
+            <div class="stripe"></div>
+            <div class="box">
+                <span>cvv</span>
+                <div class="cvv-box"></div>
+                <img src="../images/visa.png" alt="">
+            </div>
+        </div>
 
-    <div class="exp-date">00/00</div>
-
-    <div class="card-cvv">000</div>
-  </div>
-  <div class="form-container">
-    <label>CARDHOLDER NAME</label><br>
-    <input class="name-input" placeholder="Jane Appleseed"><br><br>
-    <label>CARD NUMBER</label><br>
-    <input class="name-input" placeholder="0000 0000 0000 0000"><br><br>
-    
-    <div class="sub-container">
-      <div>
-        <label>EXP. DATE (MM/YY)</label><br>
-        <input class="mm-input" placeholder="MM">
-        <input class="yy-input" placeholder="YY">
-      </div>
-      <div>
-        <label>CVC</label><br>
-        <input class="cvv-input" placeholder="e.g. 123"><br><br>
-      </div>
     </div>
-    <button class="confirm-btn">Confirm</button>
-  </div>
-</div>
-  
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+
+    <form action="">
+        <div class="inputBox">
+            <span>card number</span>
+            <input type="text" maxlength="16" class="card-number-input" placeholder="0000 0000 0000 0000">
+            <h6 class="number-error">Cannot contain letters or symbols</h6>
+        </div>
+        <div class="inputBox">
+            <span>card holder</span>
+            <input type="text" class="card-holder-input" placeholder="e.g. Jane Appleseed">
+        </div>
+        <div class="flexbox">
+            <div class="inputBox">
+                <span>expires mm</span>
+                <select name="" id="" class="month-input">
+                    <option value="month" selected disabled>month</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <h6 class="expire-error">Your card has expired</h6>
+            </div>
+            <div class="inputBox">
+                <span>expires yy</span>
+                <select name="" id="" class="year-input">
+                    <option value="year" selected disabled>year</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                    <option value="2031">2031</option>
+                    <option value="2032">2032</option>
+                </select>
+            </div>
+            <div class="inputBox">
+                <span>cvv</span>
+                <input type="text" maxlength="3" class="cvv-input" placeholder="e.g. 123">
+            </div>
+        </div>
+        <input type="submit" value="submit" class="submit-btn">
+    </form>
+</div> 
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,326 +1,214 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
 *{
-    margin: 0px;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: uppercase;
 }
-.sides-container {
-    display: grid;
-    grid-template-columns: auto auto;
+
+.container{
+    min-height: 100vh;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
 }
-.background-main-img{
-    height:100vh;
-    width: 40%;
-    content: url("../images/bg-main-desktop.png")
+
+.container form{
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    padding: 20px;
+    width: 600px;
+    padding-top: 160px;
 }
-.card-front {
-    width: 25%;
-    height: 25%;
-    position: absolute;
-    top: 22%;
-    left: 10%;
+
+.container form .inputBox{
+    margin-top: 20px;
 }
-.card-back {
-    width: 25%;
-    height: 25%;
-    position: absolute;
-    bottom: 22%;
-    left: 15%;
+
+.container form .inputBox span{
+    display: block;
+    color:#999;
+    padding-bottom: 5px;
 }
-.card-bank-number {
-    position: absolute;
-    top: 37%;
-    left: 12%;
-    font-size: 20px;
-    color: white;
-}
-.card-name {
-    position: absolute;
-    top: 42%;
-    left: 12%;
-    font-size: 14px;
-    color: white;
-}
-.exp-date {
-    position: absolute;
-    top: 42%;
-    left: 30%;
-    font-size: 14px;
-    color: white;
-}
-.card-cvv {
-    position: absolute;
-    bottom: 33.5%;
-    left: 35%;
-    color: white;
-}
-.form-container {
-    position: absolute;
-    top: 30%;
-    left: 55%;
-}
-.name-input, .card-input {
-    width: 400px;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid black;
-}
-.sub-container {
-   display: grid;
-   grid-template-columns: auto auto;
-    width: 400px;
-}
-.mm-input {
-    width: 33%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid black;
-}
-.yy-input {
-    width: 33%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid black;
-}
-.cvv-input {
-    padding: 10px;
+
+.container form .inputBox input,
+.container form .inputBox select{
     width: 100%;
-    border-radius: 6px;
-    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid rgba(0,0,0,.3);
+    color:#444;
 }
-.confirm-btn {
-    width: 420px;
-    padding: 12px;
+
+.container form .flexbox{
+    display: flex;
+    gap:15px;
+}
+
+.container form .flexbox .inputBox{
+    flex:1 1 150px;
+}
+
+.container form .submit-btn{
+    width: 100%;
+    background:linear-gradient(45deg, rgb(26, 25, 27), rgba(0, 21, 255, 0.595));
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color:#fff;
+    border-radius: 10px;
     cursor: pointer;
-    background-color:hsl(278, 68%, 11%);
-    color: white;
-    border-radius: 6px;
-    border: none;
+    transition: .2s linear;
 }
-@media only screen and (max-width: 1190px) {
-    .card-front {
-        height: 22%;
-        top: 26%;
-        width: 30%;
+
+.container form .submit-btn:hover{
+    opacity: .8;
+}
+
+.container .card-container{
+    margin-bottom: -150px;
+    position: relative;
+    height: 250px;
+    width: 400px;
+}
+
+.container .card-container .front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0; left: 0;
+    background:linear-gradient(45deg, rgb(26, 25, 27), rgba(0, 21, 255, 0.595));
+    border-radius: 5px;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    padding:20px;
+    transform: perspective(1000px) rotateY(0deg);
+    transition:transform .4s ease-out;
+
+}
+
+.container .card-container .front .image{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.container .card-container .front .image img{
+    height: 50px;
+}
+
+.container .card-container .front .card-number-box{
+    padding:30px 0;
+    font-size: 22px;
+    color:#fff;
+}
+
+.container .card-container .front .flexbox{
+    display: flex;
+}
+
+.container .card-container .front .flexbox .box:nth-child(1){
+    margin-right: auto;
+}
+.container .card-container .front .flexbox .box{
+    font-size: 15px;
+    color: #fff;
+}
+.container .card-container .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(45deg, rgb(26, 25, 27), rgba(0, 21, 255, 0.595));
+    border-radius: 10px;
+    padding: 20px;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    transform:perspective(1000px) rotateY(180deg);
+    transition:transform .4s ease-out;
+}
+.container .card-container .back .stripe{
+    background: #000;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+}
+
+.container .card-container .back .box{
+    padding: 0 20px;
+}
+
+.container .card-container .back .box span{
+    color:#fff;
+    font-size: 15px;
+}
+
+.container .card-container .back .box .cvv-box{
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color:#333;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.container .card-container .back .box img{
+    margin-top: 30px;
+    height: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container form {
+        width: 350px;
     }
-    .card-back {
-        height: 22%;
-        bottom: 26%; 
-        width: 30%;
+    .container .card-container{
+        margin-bottom: -150px;
+        position: relative;
+        height: 197px;
+        width: 315px;
     }
-    .card-bank-number {
-        top: 40%;
-        left: 12%;
-        font-size: 16px;
-    }
-    .card-name {
-        top: 44%;
-        left: 12%;
-        font-size: 12px;
-    }
-    .exp-date {
-        top: 44%;
-        left: 34.5%;
-        font-size: 12px;
-    }
-    .card-cvv {
-        bottom: 36%;
-        left: 39%;
+    .container .card-container .front .flexbox .box{
         font-size: 14px;
+        color: #fff;
+        margin-top: -20px;
     }
-}
-@media only screen and (max-width: 1000px) {
-    .card-front {
-        height: 22%;
-        width: 32%;
-        top: 26%;
+    .container .card-container .front .image img{
+        height: 40px;
     }
-    .card-back {
-        height: 22%;
-        bottom: 26%; 
-        width: 32%;
-    }
-    .card-bank-number {
-        left: 12%;
-        font-size: 16px;
-    }
-    .card-name {
-        left: 12%;
-        font-size: 12px;
-    }
-    .exp-date {
-        left: 36%;
-        font-size: 12px;
-    }
-    .card-cvv {
-        bottom: 36%;
-        left: 40%;
-        font-size: 14px;
-    }
-}
-@media only screen and (max-height: 790px) {
-    .card-front {
-        width: 22%;
-    }
-    .card-back {
-        width: 22%;     
-    }
-    .card-bank-number {
-        left: 13%;
-        font-size: 15px;
-    }
-    .card-name {
-        left: 13%;
-        font-size: 12px;
-    }
-    .exp-date {
-        left: 28%;
-        font-size: 12px;
-    }
-    .card-cvv {
-        bottom: 33.75%;
-        left: 32.5%;
-        font-size: 14px;
-    }
-}
-@media only screen and (max-height: 650px) {
-    .card-front {
-        left: 12%;
-        width: 20%;
-    }
-    .card-back {
-        width: 20%;     
-    }
-    .card-bank-number {
-        left: 13%;
-        font-size: 15px;
-    }
-    .card-name {
-        left: 13%;
-        font-size: 12px;
-    }
-    .exp-date {
-        left: 28%;
-        font-size: 12px;
-    }
-    .card-cvv {
-        bottom: 33.75%;
-        left: 30.5%;
-        font-size: 14px;
-    }
-}
-@media only screen and (max-height: 550px) {
-    .card-front {
-        left: 12%;
-        width: 20%;
-        height: 25%;
-    }
-    .card-back {
-        width: 20%;   
-        height: 25%;  
-    }
-}
-@media only screen and (max-width: 400px) {
-    .background-main-img{
-        width:100vw;
-        height: 90%;
-        content: url("../images/bg-main-mobile.png");
-    }
-    .card-back {
-        width: 70%;
-        height: 20%;
-        top: 5%;
-        left: 25%;
-        z-index: 1;
-    }
-     .card-front {
-        width: 70%;
-        height: 20%;
-        top: 17%;
-        left: 10%;
-        z-index: 3;
-    } 
-    .sides-container {
-        display: flex;
-        grid-template-columns: auto auto;
-    }
-    .card-bank-number {
-        position: absolute;
-        top: 29%;
-        left: 15%;
-        font-size: 16px;
-        color: white;
-        z-index: 5;
-    }
-    .card-name {
-        position: absolute;
-        top: 33%;
-        left: 15%;
-        font-size: 12px;
-        color: white;
-        z-index: 5;
-    }
-    .exp-date {
-        position: absolute;
-        top: 33%;
-        left: 65%;
-        font-size: 12px;
-        color: white;
-        z-index: 5;
-    }
-    .card-cvv {
-        position: absolute;
-        top: 13.8%;
-        left: 80%;
-        color: white;
-        z-index: 5;
-        font-size: 12px;
-    }
-    .form-container {
-        position: absolute;
-        top: 45%;
-        left: 5%;
-    }
-    .sub-container {
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        width: 88%;
-    }
-    .name-input, .card-input {
-        width: 88%;
-        padding: 10px;
-        border-radius: 6px;
-        border: 1px solid black;
-        outline: none;
-    }
-    .mm-input {
-        width: 33%;
-        padding: 10px;
-        border-radius: 6px;
-        border: 1px solid black;
-        outline: none;
-    }
-    .yy-input {
-        width: 33%;
-        padding: 10px;
-        border-radius: 6px;
-        border: 1px solid black;
-        outline: none;
-    }
-    .cvv-input {
+    .container .card-container .back .stripe{
+        background: #000;
         width: 100%;
-        padding: 10px;
-        grid-column: 3/5; 
-        border-radius: 6px;
-        border: 1px solid black;
-        outline: none;
+        margin: 10px 0;
+        height: 35px;
     }
-    .confirm-btn {
-        width: 94%;
-        padding: 12px;
-        cursor: pointer;
-        background-color:hsl(278, 68%, 11%);
-        color: white;
-        border-radius: 6px;
-        border: none;
+    .container .card-container .back .box .cvv-box{
+        height: 35px;
+        padding: 5px;
+        margin-top: 5px;
+        color:#333;
+        background: #fff;
+        border-radius: 5px;
+        width: 100%;
     }
+    .container .card-container .back .box img{
+        margin-top: 20px;
+        height: 25px;
+    }
+}
+.number-error {
+    display: none;
+}
+.expire-error {
+    display: none;
 }
